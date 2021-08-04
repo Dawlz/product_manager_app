@@ -20,8 +20,6 @@ const LogIn = (props) => {
             .then(res => 
                {
                 if (res.status === 200) {
-                    console.log(res)
-                    // const userId = res.data.user._id;
                     navigate('/home/' + res.data.user._id);
                 }})
             .catch(err => {

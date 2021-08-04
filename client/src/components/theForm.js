@@ -30,8 +30,7 @@ const NewProductForm = (props) => {
       quantity,
       description
     }, {withCredentials:true})
-      .then(res => {
-        console.log(res.data.products);})
+      .then()
       .catch(err => {console.log(err); navigate('/login')})
     setTitle('');
     setPrice(0);
