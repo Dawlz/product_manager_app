@@ -65,13 +65,13 @@ module.exports.updateProduct = ( req, res ) => {
         { $set: { "products.$.title" : updatedProduct.title,
                   "products.$.price" : updatedProduct.price,
                   "products.$.quantity" : updatedProduct.quantity,
-                  "products.$.description" : updatedProdct.description} },
+                  "products.$.description" : updatedProduct.description} },
         {new: true}
       )
         .then(updatedUserProduct => res.json(updatedUserProduct))
         .catch(err => console.log("Couldn't update user product" + err))
     })
-    .catch(err => res.json(err))
+    .catch(err =>res.json(err))
 };
 
 module.exports.deleteProduct = (req, res) => {
